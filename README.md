@@ -1,10 +1,10 @@
 # Python Programming
 
-Here you can find the labs for our CodingNomads online Python Programming course.
+Here you can find the labs for our CodingNomads online Python Programming course exclusively on Bali!
 
 ---
 
-## Push me to your GitHub
+## Push me to your GitHub Bro!
 
 You should see this document after you have downloaded the sample code. 
 This folder contains **your own copy** of all the labs and that we will be working with.
