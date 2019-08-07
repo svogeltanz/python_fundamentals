@@ -9,3 +9,5 @@ msg = "Hello World!"
 
 for x in range(5):
     print(msg)
+
+print(msg * 5)

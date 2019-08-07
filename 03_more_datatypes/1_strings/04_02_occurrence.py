@@ -7,3 +7,15 @@ Letter input: o
 Result: 4
 
 '''
+
+# take a sentence from the user
+user_input = input("Please enter a sentence: ")
+
+# take the letter which you want to find
+user_letter = input("Please enter a letter of the sentence: ")
+
+# find the index of the letter's first occurence
+letter_index = str(user_input.index(user_letter))
+
+# print the result
+print("Result: " + letter_index)
