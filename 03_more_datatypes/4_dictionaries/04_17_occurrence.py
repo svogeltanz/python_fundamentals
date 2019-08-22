@@ -6,3 +6,13 @@ user_input = "hello"
 result = {"h": 1, "e": 1, "l": 2, "o": 1}
 
 '''
+
+from collections import Counter
+
+user_str = input("Please enter a word: ")
+user_list = list(user_str)
+
+# Counter counts the occurences of every element of the list and puts it in a dict
+user_dict = Counter(user_list)
+
+print(user_dict)
