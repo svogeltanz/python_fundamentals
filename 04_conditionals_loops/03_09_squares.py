@@ -5,3 +5,7 @@ Use a for loop that demonstrates the use of the range function.
 
 '''
 
+
+for x in range(1, 51):
+    print("The square number of " + str(x) + " is: " + str(x**2))
+
