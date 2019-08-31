@@ -11,7 +11,7 @@ user_num = int(input("Please enter a number between 1 and 1 million: "))
 found_number = False
 
 # while loop to find the number; exit after finding and print it
-while found_number == False:
+while not found_number:
     guess_num = random.randint(1, 1000001) # create random number
     if guess_num == user_num: # compare numbers
         print("Congrats, you got it! The number is: " + str(guess_num))
@@ -19,4 +19,6 @@ while found_number == False:
         break # get out of the loop
     else:
         print("Try again!")
+
+# maybe do it again with num +1
 

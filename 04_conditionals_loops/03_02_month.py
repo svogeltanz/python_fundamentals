@@ -8,6 +8,8 @@ or other respectively. Use a "nested-if" statement.
 # take a number from the user
 user_input = int(input("Please enter a number: "))
 
+# use dict to lookup value
+
 # check the number with the month
 if user_input != "":
     if user_input == 1:

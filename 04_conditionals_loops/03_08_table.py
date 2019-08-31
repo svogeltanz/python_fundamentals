@@ -10,7 +10,8 @@ Use a loop to print the following table to the console:
 '''
 
 # use one big loop instead?!
-
+# for loop from 0 to 50; linebreak after 19,29 etc \n
+'''
 a = 0
 b = a + 10
 for x in range(a, b):
@@ -36,3 +37,12 @@ f = e + 10
 for x in range(e, f):
     print(x, end=" ")
 
+'''
+s = ""
+
+for i in range(50):
+    if i % 10 == 0 and i != 0:
+        s += "\n"
+    s += str(i) + " "
+
+print(s)
