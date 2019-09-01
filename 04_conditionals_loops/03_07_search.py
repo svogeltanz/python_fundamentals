@@ -20,5 +20,5 @@ while not found_number:
     else:
         print("Try again!")
 
-# maybe do it again with num +1
+# maybe do it again with num +1 and counting to million
 
