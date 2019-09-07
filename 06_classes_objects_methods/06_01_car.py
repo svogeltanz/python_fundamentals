@@ -17,11 +17,12 @@ class Car:
         self.year = year
         self.max_speed = max_speed
 
+    def __str__(self):
+        return f"Model: {self.model}, Year: {self.year}, Speed: {self.max_speed}"
+
     def speed_increase(self):
         self.max_speed += 5
 
-    def __str__(self):
-        return f"Model: {self.model}, Year: {self.year}, Speed: {self.max_speed}"
 
 speedy = Car("Lambo", 1994, 330)
 
