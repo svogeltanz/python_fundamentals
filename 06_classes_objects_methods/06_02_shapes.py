@@ -22,13 +22,11 @@ class Rectangle:
 
     def area(self):
         '''Calculates the area of the rectangle'''
-        result = self.length * self.width
-        return result
+        return self.length * self.width
 
     def perimeter(self):
         '''Calculates the perimeter of the rectangle'''
-        result = (self.length + self.width) * 2
-        return result
+        return (self.length + self.width) * 2
 
 
 # create class for circle; constructed by radius
@@ -45,14 +43,12 @@ class Circle:
     def area(self):
         '''Calculates the area of the circle'''
         pi = 3.14
-        result = pi * (self.radius**2)
-        return result
+        return pi * (self.radius**2)
 
     def circumference(self):
         '''Calculates the circumference of the rectangle'''
         pi = 3.14
-        result = pi * self.radius * 2
-        return result
+        return pi * self.radius * 2
 
 r = Rectangle(10, 5)
 print(r.area())

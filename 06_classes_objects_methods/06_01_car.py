@@ -23,6 +23,8 @@ class Car:
     def speed_increase(self):
         self.max_speed += 5
 
+    def whatever(self):
+        self.speed_increase()
 
 speedy = Car("Lambo", 1994, 330)
 
