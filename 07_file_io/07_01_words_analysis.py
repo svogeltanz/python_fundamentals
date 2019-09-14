@@ -7,34 +7,34 @@ Write a script that reads in the words from the words.txt file and finds and pri
 
 
 '''
-file = 'words.txt'
-with open(file, encoding='utf-8') as words:
-    contents = words.read()
-    words = contents.split() # creates a list
+
+# read from file words.txt
+with open("words.txt", "r") as file_out:
+    file_content = file_out.read()
+    words = file_content.split()  # creates a list of words
     words.sort(key=len)
-    print(words[:10])
-    min_words_list = []
-    max_words_list = []
-    #print(words[0])# check to see first word
-    #print(type(words[0])) #check to see the type its a string
-    print(words[len(words)-1]) #check to see the last word
-    first = int(len(words[0]))  # smallest word should be at the front due to the sort
-    last = int(len(words[len(words)-1])) # largest word should be at the back due to the sort
-    for word in words: #creating a new list for all small words with the same length
-        if len(word) == first:
-            min_words_list.append(word)
-            #print(word, end=" ")
-        if len(word) == last: #creating a new list for all large words with the same length
-            max_words_list.append(word)
-            print(word, end=" ")
-    print()# to break for a new line
-    print('The file ' + file + ' has ' + str(len(words)) + " words.")
+    # print(words)
+    # sorted list should have the smallest at the front and the longest in the back
+    short = int(len(words[0]))
+    long = int(len(words[len(words)-1]))
+    # create two new empty lists and append words with the same length
+    shortest_words = []
+    longest_words = []
+    for word in words:
+        if len(word) == short:
+            shortest_words.append(word)
+        if len(word) == long:
+            longest_words.append(word)
+    print()
+    print(f"Here is a list with the shortest words: {shortest_words}")
+    print()
+    print(f"Here is a list with the longest words: {longest_words}")
+
+    # find the total number of words in the file
+    number = 0
+    for word in words:
+        number += 1
+
+    print(f"The total number of words in the file is: {number}")
 
 
-    print(min_words_list)
-    print(max_words_list)
-    print(len(min_words_list))
-    print(len(max_words_list))
-
-    print(min_words_list[0].capitalize() + ' is one of the shortest word containing a length of ' + str(len(min_words_list[0])) + ' characters.')
-    print(max_words_list[0].capitalize() + ' is one of the longest word containing a length of ' + str(len(max_words_list[0])) + ' characters.')
