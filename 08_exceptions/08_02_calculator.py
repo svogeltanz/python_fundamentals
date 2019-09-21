@@ -8,3 +8,15 @@ the script should handle:
 Test it and make sure it does not crash when you enter incorrect values.
 
 '''
+
+
+try:
+    dividend = int(input("Please enter a dividend: "))
+    divisor = int(input("Please enter a divisor: "))
+    result = dividend / divisor
+    print(result)
+except ZeroDivisionError as zde:
+    print("You cannot divide by 0.")
+except ValueError as ve:
+    print("This is not a number.")
+
