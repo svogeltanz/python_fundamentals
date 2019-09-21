@@ -8,3 +8,16 @@ Start with a small folder to make it easy to check if your program is working co
 small folder name with a bigger folder. This program should work for any specified folder on your computer.
 
 '''
+
+# /Users/sebastianvogeltanz/Desktop/example
+
+import os
+
+jpg_list = []  # can be used for every file extension
+
+for file in os.listdir("/Users/sebastianvogeltanz/Desktop/example"):
+    if file.endswith(".jpg"):
+        file = os.path.join("/Users/sebastianvogeltanz/Desktop/example", file)  # builds a new string for the file name with the complete path
+        jpg_list.append(file)  # adds the file name as a string to the list
+
+print(jpg_list)

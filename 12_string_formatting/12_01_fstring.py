@@ -25,5 +25,9 @@ famous_quotes = [
 for pack in famous_quotes:
     names = pack["full_name"]
     quotes = pack["quote"]
-    print(f"{quotes} - {names}")
+    print(f'"{quotes}" - {names}')
 
+# split the name string into two words
+# call split on the names
+# figure out how to handle the middle name
+# check the length of the split string
