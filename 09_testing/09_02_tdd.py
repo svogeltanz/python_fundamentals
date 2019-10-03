@@ -8,3 +8,13 @@ fail and write tests that will check and prevent failure.
 You do not need to implement the actual functions after writing the tests but you may.
 
 '''
+
+# creating a function with input parameters
+def add(x, y):
+    return x + y
+
+def sub(x, y):
+    return x - y
+
+def multi(x, y):
+    return x * y

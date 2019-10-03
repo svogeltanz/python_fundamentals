@@ -7,3 +7,21 @@ test should pass.
 Also include a test that does not pass.
 
 '''
+
+import unittest
+
+# define function
+def divide(x, y):
+    try:
+        return x/y
+    except ZeroDivisionError:
+        return f"Error. Cannot divide by 0."
+
+
+# --------------------------------------------
+# TESTING
+
+
+
+
+
