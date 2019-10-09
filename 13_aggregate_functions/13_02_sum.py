@@ -17,3 +17,5 @@ def sum(list):
 list = [0, 3, 5, 7, 11, 16]
 
 print(sum(list))
+
+# no list as parameter
