@@ -9,15 +9,14 @@ Result: #ore python progra##ing please
 '''
 
 # take string input
-user_sent = input("Please enter a sentence: ")
+user_sentence = input("Please enter a sentence: ")
 
 # take a symbol input
-user_symb = input("Please enter a symbol: ")
+user_symbole = input("Please enter a symbol: ")
 
 # replace  the first letter with the symbol
-
-user_sent = user_sent.replace(user_sent[0], user_symb)
+user_sentence = user_sentence.replace(user_sentence[0], user_symbole)
 
 # print the result
-print(user_sent)
+print(user_sentence)
 

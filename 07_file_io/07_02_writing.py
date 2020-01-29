@@ -18,4 +18,6 @@ with open("words_reverse.txt", "w") as fin:
         fin.write(word)
 
 print(len(content_list))
-print(len(reverse_list))  # ask Johnny: reverse list is one word more in length and length in 7_1 is different
+print(len(reverse_list))
+
+

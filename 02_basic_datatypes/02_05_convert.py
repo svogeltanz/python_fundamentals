@@ -19,7 +19,7 @@ print(int_to_float)
 float_to_int = int(5.0)
 print(float_to_int)
 
-#3 floor division cuts the part after the period
+#3 floor division cuts the part after the period/full stop
 result = 5.0 // 3
 print(result)
 
@@ -27,6 +27,6 @@ print(result)
 user_one = int(input("Please enter a number: "))
 user_two = int(input("Please enter a second number: "))
 
-result_multi = user_one * user_two
+result = user_one * user_two
 
-print("The product of your numbers is: " + str(result_multi))
+print("The product of your numbers is: " + str(result))

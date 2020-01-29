@@ -16,4 +16,4 @@ user_fahrenheit = int(input("Please enter a temperature in Fahrenheit: "))
 
 user_celsius = (user_fahrenheit - 32) * (5/9)
 
-print("A temperature in Fahrenheit of: " + str(user_fahrenheit) + " is the same as " + str(user_celsius) + " in celsius.")
+print("A temperature in fahrenheit of: " + str(user_fahrenheit) + " = " + str(user_celsius) + " in celsius.")

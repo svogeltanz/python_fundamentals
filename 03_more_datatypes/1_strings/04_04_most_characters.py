@@ -5,7 +5,8 @@ Write a script that takes three strings from the user and prints the one with th
 
 
 # take three words from the user into a list
-user_list = [input("Please enter a string: "), input("Please enter a second string: "), input("Please enter a third string: ")]
+user_list = [input("Please enter a string: "), input("Please enter a second string: "),
+             input("Please enter a third string: ")]
 print(user_list)
 
 # use a for loop to count characters in string

@@ -10,8 +10,14 @@ NOTE: We will use the input() function to collect users input. An example is dem
 # because the input() function collects the input as a string, we have to convert it to an int
 # The string passed to the input() function is what the user is prompted with
 days = int(input("Please enter a number in days between 1 and 1,000,000,000: "))
+user_seconds = None
+
+if days < 1 or days > 1000000000:
+    print("Something went wrong! You have entered a number I cannot work with. Please try again:")
+    days = int(input("Please enter a number in days between 1 and 1,000,000,000: "))
 
 user_seconds = days * 24 * 60 * 60
+
 
 print("We converted " + str(days) + " days into " + str(user_seconds) + " seconds for you. Cheers!")
 

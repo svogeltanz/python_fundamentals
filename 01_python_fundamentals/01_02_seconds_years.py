@@ -5,7 +5,7 @@ From the previous example, move your calculation of how many seconds in a year t
 '''
 
 print("In this Script is calculated how many seconds are in one year. Therefore you have to enter the correct numbers "
-      "for the day, hours, minutes and seconds")
+      "for the days, hours, minutes and seconds")
 
 days = int(input("Please enter the amount of days in one year: "))
 hours = int(input("Please enter the amount of hours in one day: "))
