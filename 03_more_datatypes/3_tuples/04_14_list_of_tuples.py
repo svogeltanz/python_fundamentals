@@ -1,4 +1,5 @@
 '''
+
 Write a script that takes a string from the user and creates a list of tuples with each word.
 For example:
 

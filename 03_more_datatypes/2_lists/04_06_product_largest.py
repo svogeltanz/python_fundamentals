@@ -1,4 +1,5 @@
 '''
+
 Take in 10 numbers from the user. Place the numbers in a list.
 Find the largest number in the list.
 Print the results.
@@ -26,10 +27,9 @@ max_number = max(user_input_list)
 # print the largest number
 print("The max value of your list is: " + str(max_number))
 
-# calculate the product of all number of the list using a for loop
+# calculate the product of all numbers of the list using a for loop
 result = 1
 for number in user_input_list:
     result = result * number
 
-print("The product of the whole list is: ")
-print(result)
+print("The product of the whole list is: ", result)
