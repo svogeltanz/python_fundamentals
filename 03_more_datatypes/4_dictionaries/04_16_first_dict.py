@@ -5,17 +5,19 @@ result = {1: 1, 2: 4, 3: 9, ...and so on}
 
 '''
 
-# create an empty dict
-first_dict = {}
+# create an empty dictionary
+# fill a list for the keys with numbers 1 to 10
+# fill the dict with the previous list and square the values
 
-# create a list that takes 1-10
-dict_list = []
-for i in range(1, 11):
-    dict_list.append(i)
+my_dict = {}
 
-print(dict_list)
+list_of_keys = []
 
-# add values to the dict using a for loop
-first_dict = {i: (i * i) for i in dict_list}
+for i in range(1,11):
+    list_of_keys.append(i)
 
-print(first_dict)
+print(list_of_keys)
+
+my_dict = {i: (i*i) for i in list_of_keys}
+
+print(my_dict)
