@@ -1,8 +1,6 @@
 '''
 
-Write a script that completes the following tasks.
-
-'''
+Write a script that completes the following tasks:
 
 # define a function that determines whether the number is divisible by 4 or 7 and returns a boolean
 
@@ -14,19 +12,31 @@ Write a script that completes the following tasks.
 
 # print your new variables to display the results
 
-def is_divisible_4or7(number):
-    if number % 4 == 0 or number % 7 == 0:
+'''
+
+# function for 4 or 7
+def isDivisibleBy4or7(num):
+    if num % 4 == 0 or num % 7 == 0:
         return True
     return False
 
-def is_divisible_4and7(number):
-    if number % 4 == 0 and number % 7 == 0:
+
+# function for both 4 and 7
+def isDivisibleBy4and7(num):
+    if num % 4 == 0 and num % 7 == 0:
         return True
     return False
 
-user_input = int(input("Please enter a number between 1 and 1,000,000,000: "))
+# take an input as a number
+input_number = int(input("Please enter a number from 1 to 1,000,000,000: "))
 
-fourORseven = is_divisible_4or7(user_input)
-fourANDseven = is_divisible_4and7(user_input)
+check4or7 = isDivisibleBy4or7(input_number)
+check4and7 = isDivisibleBy4and7(input_number)
 
-print(f"Your number is divisible by 4 or 7: {fourORseven}\nYour number is divisible by 4 and 7: {fourANDseven}")
+if check4or7:
+    print("Your number is divisible by 4 or 7.")
+elif check4and7:
+    print("Your number is divisible by 4 and 7.")
+else:
+    print("Your number is not divisible by neither 4 nor 7.")
+

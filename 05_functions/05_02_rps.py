@@ -1,9 +1,62 @@
 '''
+
 Code a game of rock paper scissors.
 
 '''
 
+# the user needs a hand to choose
 
+# a random hand has to be chosen by the computer/player 2
+
+# check in a dictionary which combination determines who wins
+
+import random
+
+print("Let's play a game of rock, paper, scissors! \n"
+      "You can choose your hand first. Here are your options: \n"
+      "1. Rock \n"
+      "2. Paper \n"
+      "3. Scissors")
+user_hand = int(input("Please enter the number of your choice: "))
+
+pc_hand = random.randrange(1, 4, 1)
+
+hand_finder = {1: "Rock", 2: "Paper", 3: "Scissors"}
+
+print("Your hand is: ", hand_finder[user_hand])
+print("The computer's hand is: ", hand_finder[pc_hand])
+
+# determine who won with a nested if-statement; or use a function to determine winner
+
+def determineWinner(hand1, hand2):
+
+    if user_hand == 1 and pc_hand == 1:
+        print("You tie!")
+    elif user_hand == 2 and pc_hand == 1:
+        print("You win!")
+    elif user_hand == 3 and pc_hand == 1:
+        print("You loose!")
+    elif user_hand == 1 and pc_hand == 2:
+        print("You loose!")
+    elif user_hand == 2 and pc_hand == 2:
+        print("You tie!")
+    elif user_hand == 3 and pc_hand == 2:
+        print("You win!")
+    elif user_hand == 1 and pc_hand == 3:
+        print("You win!")
+    elif user_hand == 2 and pc_hand == 3:
+        print("You loose!")
+    elif user_hand == 3 and pc_hand == 3:
+        print("You tie!")
+    else:
+        print("Something went wrong!")
+    return
+
+
+determineWinner(user_hand, pc_hand)
+
+# see below a prior version
+'''
 # function to get hand based on number
 def get_hand(number):
     number_to_hand = {0: "Scissor", 1: "Rock", 2: "Paper"}
@@ -61,4 +114,4 @@ print(f"The hand of the computer is: {comp_hand}")
 # print out the winner
 print(f"And the result of the game is: {game_result}")
 
-
+'''
