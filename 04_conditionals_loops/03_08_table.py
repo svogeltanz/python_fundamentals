@@ -9,40 +9,18 @@ Use a loop to print the following table to the console:
 
 '''
 
-# use one big loop instead?!
-# for loop from 0 to 50; linebreak after 19,29 etc \n
-'''
-a = 0
-b = a + 10
-for x in range(a, b):
-    print(x, end=" ")
-print("")
+# create a lists to print
+single_diggit = []
 
-c = b + 10
-for x in range(b, c):
-    print(x, end=" ")
-print("")
 
-d = c + 10
-for x in range(c, d):
-    print(x, end=" ")
-print("")
+# fill the list with the numbers
+for num in range(0, 50, 1):
+    single_diggit.append(num)
 
-e = d + 10
-for x in range(d, e):
-    print(x, end=" ")
-print("")
 
-f = e + 10
-for x in range(e, f):
-    print(x, end=" ")
+# print the list with linebreaks at the end
+for num in single_diggit:
+    print(num, end=' ')
+    if ((num+1) % 10) == 0 and num != 0:
+        print("\n")
 
-'''
-s = ""
-
-for i in range(50):
-    if i % 10 == 0 and i != 0:
-        s += "\n"
-    s += str(i) + " "
-
-print(s)
