@@ -5,17 +5,34 @@ Print the result.
 
 '''
 
-# take a number from the user between 1 and 1,000,000,000
-user_input = int(input("Please enter a number between 1 and 1,000,000,000: "))
+# get user input and store it as a number
+user_number = int(input("Please enter a number: "))
 
-
-# check if the number is in the proposed range
-if user_input <= 1000000000 and user_input >= 1:
-    # check if the number is divisible by 3 and print a statement if it is or is not
-    if user_input % 3 == 0:
-        print("Congrats! Your number is divisible by 3!")
+def checkIfNumber(number):
+    # checks if the given number is in the correct range
+    if type(number) == int and 1000000000 > number > 1:
+        print("Thank you for your input!")
     else:
-        print("This number is not divisible by 3.")
-else:
-    print("Sorry that is a wrong number!")
+        print("Something went wrong. Please try again:")
+        user_number = int(input("Please enter a new number between 1 and 1,000,000,000: "))
+    return
 
+
+def checkIfDivisible(number):
+    # checks if the given number is divisible by three
+    if number % 3 == 0:
+        print("Your input is divisible by 3.")
+    else:
+        print("Your number cannot be divided by 3.")
+    return
+
+
+def doTheMath(number):
+    # divides the given number by 3 and prints the result to the console
+    result = number / 3
+    print("Your number divided by 3 is: ", result)
+    print("Your number was ", number)
+
+checkIfNumber(user_number)
+checkIfDivisible(user_number)
+doTheMath(user_number)

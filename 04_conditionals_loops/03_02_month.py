@@ -5,40 +5,50 @@ or other respectively. Use a "nested-if" statement.
 
 '''
 
-# take a number from the user
-user_input = int(input("Please enter a number: "))
+# try using a dictionary to lookup the value fo the month and print it
 
-# use dict to lookup value
+# create a dict with the values for the month
+month_dict = {1: "January",
+              2: "February",
+              3: "March",
+              4: "April",
+              5: "May",
+              6: "June",
+              7: "July",
+              8: "August",
+              9: "September",
+              10: "October",
+              11: "November",
+              12: "December"}
 
-# check the number with the month
-if user_input != "":
-    if user_input == 1:
-        print("January")
-    elif user_input == 2:
-        print("February")
-    elif user_input == 3:
-        print("March")
-    elif user_input == 4:
-        print("April")
-    elif user_input == 5:
-        print("May")
-    elif user_input == 6:
-        print("June")
-    elif user_input == 7:
-        print("July")
-    elif user_input == 8:
-        print("August")
-    elif user_input == 9:
-        print("September")
-    elif user_input == 10:
-        print("October")
-    elif user_input == 11:
-        print("November")
-    elif user_input == 12:
-        print("December")
-    elif user_input < 1:
-        print("That is a small one!")
-    elif user_input > 12:
-        print("That is too big to handle for me!")
-else:
-    print("You have to enter a number! :) ")
+month_keys = month_dict.keys()
+
+# take a number as input
+user_input = int(input("Please enter an number between 1 and 12: "))
+
+# loop through the keys and find the match. Put that in a function to call it.
+
+
+def monthFinder(number):
+
+    ''' Checks if the given number is within the dictionary keys and prints the value for it.
+        If the value is not in the dict: the user is asked a new number. '''
+
+    # variable to check if everything worked out, has to be in the scope of the function
+    result = False
+
+    # loop through the keys and find the match, print the value
+    for key in month_keys:
+        if key == number:
+            print("Your month is: ", month_dict[key])
+            result = True
+
+    # if the user input is not in the dict, ask for a new number and call the function again
+    if not result:
+        print("There has been a missunderstanding with your number. Please try again.")
+        number = int(input("Please enter a new number between 1 and 12: "))
+        monthFinder(number)
+    return
+
+
+monthFinder(user_input)
