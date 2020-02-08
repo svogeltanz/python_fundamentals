@@ -10,6 +10,7 @@ changing the objects attributes.
 
 '''
 
+
 class Car:
 
     def __init__(self, model, year, max_speed):
@@ -18,21 +19,30 @@ class Car:
         self.max_speed = max_speed
 
     def __str__(self):
-        return f"Model: {self.model}, Year: {self.year}, Speed: {self.max_speed}"
+        return f"This car is a {self.model} from {self.year} with a maximum speed of {self.max_speed}."
 
-    def speed_increase(self):
+    def increase_speed(self):
         self.max_speed += 5
+        return
 
-    def whatever(self):
-        self.speed_increase()
+    def decrease_speed(self):
+        self.max_speed -= 5
+        return
 
-speedy = Car("Lambo", 1994, 330)
 
-james_bond = Car("Aston Martin", 1965, 230)
+mercedes = Car("SL500", 2020, 290)
+ferrari = Car("F50", 2013, 375)
+aston = Car("DB9", 2009, 240)
 
-speedy.speed_increase()
+mercedes.increase_speed()
 
-speedy.speed_increase()
+print(mercedes)
+print(ferrari)
+print(aston)
 
-print(speedy)
+mercedes.model = "McLaren"
+mercedes.year = 1990
+mercedes.max_speed = 370
+
+print(mercedes)
 
