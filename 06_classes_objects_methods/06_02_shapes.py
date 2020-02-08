@@ -9,51 +9,69 @@ perimeter (of the rectangle) and circumference of the circle.
 '''
 
 
-# create class for rectangle; constructed by length and width
-# write method to calculate area of both classes
-# write method to calculate perimeter
 class Rectangle:
-    '''Class for a rectangle with two methods'''
 
     def __init__(self, length, width):
-        '''Constructor which takes a length and width'''
         self.length = length
         self.width = width
 
+    def __str__(self):
+        return f"This is a rectangle with a length of {self.length} and a width of {self.width}."
+
     def area(self):
-        '''Calculates the area of the rectangle'''
         return self.length * self.width
 
     def perimeter(self):
-        '''Calculates the perimeter of the rectangle'''
-        return (self.length + self.width) * 2
+        return (2*(self.width + self.length))
 
+    def more_length(self):
+        self.length += 1
 
-# create class for circle; constructed by radius
-# write method to calculate circumference
+    def more_width(self):
+        self.width += 1
+
+    def less_length(self):
+        self.length -= 1
+
+    def less_width(self):
+        self.width -= 1
+
 
 class Circle:
-    '''Class for a circle with two methods'''
-    # set pi "globally" here to use it in all methods
 
     def __init__(self, radius):
-        '''Constructor which takes a radius'''
         self.radius = radius
 
+    def __str__(self):
+        return f"This is a circle with a radius of {self.radius}."
+
     def area(self):
-        '''Calculates the area of the circle'''
-        pi = 3.14
-        return pi * (self.radius**2)
+        return (3.14*(self.radius**2))
 
     def circumference(self):
-        '''Calculates the circumference of the rectangle'''
-        pi = 3.14
-        return pi * self.radius * 2
+        return (2 * 3.14 * self.radius)
 
-r = Rectangle(10, 5)
-print(r.area())
-print(r.perimeter())
+    def get_bigger(self):
+        self.radius += 1
 
-c = Circle(8)
-print(c.area())
-print(c.circumference())
+    def get_smaller(self):
+        self.radius -= 1
+
+
+bob = Rectangle(10, 5)
+bob.area()
+bob.perimeter()
+print(bob)
+bob.more_length()
+bob.more_length()
+print(bob)
+print(f"The area is {bob.area()}.")
+
+puh = Circle(15)
+puh.area()
+puh.circumference()
+print(puh)
+puh.get_bigger()
+puh.get_bigger()
+print(puh)
+
