@@ -19,66 +19,61 @@ Cars, animals, poker games, sports teams, trees, beers, people etc...
 
 '''
 
-# write a class for shoes (running)
-# use __init__ to set the constructor
-# use __str__ to print info about the class
-# learn about the __add__ method
+
 class Shoe:
+    '''This is the superclass for shoes'''
+    def __init__(self, brand, size, price):
+        self.brand = brand
+        self.size = size
+        self.price = price
 
-    '''Class for shoes'''
+    def __str__(self):
+        return f"This is a {self.brand} shoe with size {self.size} which cost {self.price}€."
 
-    def __init__(self, model, price, purpose):
+    def __repr__(self):
+        return f"{self.brand} in {self.size} for {self.price}."
+
+    def __add__(self, other):
+        brand = f"{self.brand}, {other.brand}"
+        size = (self.size + other.size)/2
+        price = self.price + other.price
+        return Shoe(brand, size, price)
+
+    def __len__(self):
+        return f"The length of the shoe is size {self.size}."
+
+    def expire(self):
+        print(f"This {self.brand} cannot be used anymore.")
+        self.brand = "expired " + self.brand
+
+
+adi = Shoe("adidas", 44, 120)
+print(adi)
+ni = Shoe("nike", 43, 270)
+combi = Shoe.__add__(adi, ni)
+print(combi)
+adi.expire()
+print(adi)
+
+
+# two more!
+class University:
+
+    def __init__(self, name, students, country):
+        self.name = name
+        self.students = students
+        self.country = country
+
+
+    pass
+
+
+class Notebooks:
+
+    def __init__(self, model, price, screensize):
         self.model = model
         self.price = price
-        self.purpose = purpose
-
-    def __str__(self):
-        return f"Model: {self.model}, Price: {self.price}, Purpose: {self.purpose}"
-
-    def __add__(self, other):
-        total_model = f"{self.model}, {other.model}"
-        total_cost = self.price + other.price
-        total_purpose = f"{self.purpose}, {other.purpose}"
-        return Shoe(total_model, total_cost, total_purpose)
-
-# write a class for clothes
-class Clothes:
-    '''Class for clothes'''
-
-    def __init__(self, type, season, age_in_months):
-        self.type = type
-        self.season = season
-        self.age_in_months = age_in_months
-
-    def __str__(self):
-        return f"Type: {self.type}, Season: {self.season}, Age in months: {self.age_in_months}"
-
-    def __add__(self, other):
-        total_type = f"{self.type}, {other.type}"
-        total_season = f"{self.season}, + {other.season}"
-        total_age_in_months = f"{self.age_in_months}, {other.age_in_months}"
-        return Clothes(total_type, total_season, total_age_in_months)
+        self.screensize = screensize
 
 
-# write a class for food
-class Food:
-    '''Class for food'''
-
-    def __init__(self, type, season, bio):
-        self.type = type
-        self.season = season
-        self.bio = bio
-
-    def __str__(self):
-        return f"Type: {self.type}, Season: {self.season}, Bio: {self.age_in_months}"
-
-    def __add__(self, other):
-        total_type = f"{self.type}, {other.type}"
-        total_season = f"{self.season}, + {other.season}"
-        total_age_in_months = f"{self.age_in_months}, {other.age_in_months}"
-        return Clothes(total_type, total_season, total_age_in_months)
-
-shoe1 = Shoe("Asics", 75, "Sports")
-shoe2 = Shoe("Adidas", 50, "Everday life")
-print(shoe1)
-print(shoe2)
+    pass
