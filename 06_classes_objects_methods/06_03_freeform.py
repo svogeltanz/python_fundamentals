@@ -47,6 +47,67 @@ class Shoe:
         self.brand = "expired " + self.brand
 
 
+
+
+
+class University:
+
+    def __init__(self, name, students, country):
+        self.name = name
+        self.students = students
+        self.country = country
+
+    def __str__(self):
+        return f"This is the {self.name} {self.__class__.__name__} with {self.students} students based in {self.country}."
+
+    def __repr__(self):
+        return f"{self.brand} {self.__class__.__name__} in {self.country} with {self.students} students."
+
+    def __len__(self):
+        return {self.students}
+
+    def add_students(self, new_students):
+        self.students = (self.students + new_students)
+        return self.students
+
+
+
+class Adventure:
+
+    def __init__(self, country, price, length):
+        self.country = country
+        self.price = price
+        self.length = length
+
+    def __str__(self):
+        return f"This is a trip to {self.country} with a length of {self.length} which costs {self.price}."
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}: {self.country} for {self.price}€ and {self.length} days."
+
+    def __len__(self):
+        return f"{self.length} days."
+
+    def __add__(self, other):
+        country = f"{self.country} {other.country}"
+        price = self.price + other.price
+        length = self.length + other.length
+        return Adventure(country, price, length)
+
+    def last_minute(self, deduction):
+        print(f"This {self.__class__.__name__} just got cheaper!")
+        self.price = (self.price*(100-deduction)/100)
+        return self.price
+
+
+
+
+
+print("E x e c u t i o n    T i m e")
+print("---------------------------")
+print(" Shoe Class ")
+print("---------------------------")
+
 adi = Shoe("adidas", 44, 120)
 print(adi)
 ni = Shoe("nike", 43, 270)
@@ -55,25 +116,26 @@ print(combi)
 adi.expire()
 print(adi)
 
+print("---------------------------")
+print(" University Class ")
+print("---------------------------")
 
-# two more!
-class University:
+napier = University("Edinburgh Napier", 12000, "Scotland")
+print(napier)
+thm = University("Technische Hochschule Mittelhessen", 18000, "Germany")
+print(thm)
+thm.add_students(2500)
+print(thm)
 
-    def __init__(self, name, students, country):
-        self.name = name
-        self.students = students
-        self.country = country
+print("---------------------------")
+print(" Adventure Class ")
+print("---------------------------")
 
+fuerte = Adventure("Spain", 650, 10)
+egypt = Adventure("Egypt", 750, 14)
+what = Adventure.__add__(fuerte, egypt)
+print(what)
+print(fuerte)
+fuerte.last_minute(25)
+print(fuerte)
 
-    pass
-
-
-class Notebooks:
-
-    def __init__(self, model, price, screensize):
-        self.model = model
-        self.price = price
-        self.screensize = screensize
-
-
-    pass
