@@ -3,6 +3,51 @@ Write a script that reads in the content of words.txt and writes the content in 
 to a new file words_reverse.txt.
 '''
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 with open("words.txt", "r") as fout:
     content = fout.read()
     content_list = content.split()

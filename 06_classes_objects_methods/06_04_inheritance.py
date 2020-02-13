@@ -135,12 +135,6 @@ class Adventure:
 
 
 
-
-
-
-
-
-
 print("----------Running Shoe-------------------")
 adi = Running("Adidas", 45, 160, "track", 0)
 print(adi)

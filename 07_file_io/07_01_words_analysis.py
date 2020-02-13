@@ -8,6 +8,44 @@ Write a script that reads in the words from the words.txt file and finds and pri
 
 '''
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # read from file words.txt
 with open("words.txt", "r") as file_out:
     file_content = file_out.read()

@@ -9,6 +9,39 @@ small folder name with a bigger folder. This program should work for any specifi
 
 '''
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # /Users/sebastianvogeltanz/Desktop/example
 
 import os
