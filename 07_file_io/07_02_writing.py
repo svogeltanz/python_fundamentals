@@ -47,7 +47,7 @@ to a new file words_reverse.txt.
 
 
 
-
+'''
 with open("words.txt", "r") as fout:
     content = fout.read()
     content_list = content.split()
@@ -66,3 +66,4 @@ print(len(content_list))
 print(len(reverse_list))
 
 
+'''

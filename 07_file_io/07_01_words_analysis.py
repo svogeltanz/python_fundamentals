@@ -9,6 +9,10 @@ Write a script that reads in the words from the words.txt file and finds and pri
 '''
 
 
+# open with 'with'
+# make list of all words with len()
+# make new list with len() min()
+# print the list
 
 
 
@@ -42,10 +46,7 @@ Write a script that reads in the words from the words.txt file and finds and pri
 
 
 
-
-
-
-
+'''
 # read from file words.txt
 with open("words.txt", "r") as file_out:
     file_content = file_out.read()
@@ -76,3 +77,4 @@ with open("words.txt", "r") as file_out:
     print(f"The total number of words in the file is: {number}")
 
 
+'''

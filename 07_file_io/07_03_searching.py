@@ -41,7 +41,7 @@ small folder name with a bigger folder. This program should work for any specifi
 
 
 
-
+'''
 # /Users/sebastianvogeltanz/Desktop/example
 
 import os
@@ -54,3 +54,4 @@ for file in os.listdir("/Users/sebastianvogeltanz/Desktop/example"):
         jpg_list.append(file)  # adds the file name as a string to the list
 
 print(jpg_list)
+'''
