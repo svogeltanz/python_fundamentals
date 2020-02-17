@@ -4,66 +4,9 @@ to a new file words_reverse.txt.
 '''
 
 
+# open a new file and read the reversed lines of the old file, print every line to the new file
+with open("reversed_words.txt", "w") as fin:
+    for line in reversed(list(open("words.txt", "r"))):
+        # no rstrip() needed because the new line char "\n" should stay in the list
+        fin.write(line)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-with open("words.txt", "r") as fout:
-    content = fout.read()
-    content_list = content.split()
-    # print(content)
-    reverse_list = []
-    for word in content_list:
-        reverse_list.insert(0, word)  # appends the word always at the beginning
-        content_list.remove(word)  # takes hours! faster way?
-    # print(reverse_list)
-
-with open("words_reverse.txt", "w") as fin:
-    for word in reverse_list:
-        fin.write(word)
-
-print(len(content_list))
-print(len(reverse_list))
-
-
-'''

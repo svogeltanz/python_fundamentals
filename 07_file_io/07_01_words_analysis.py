@@ -1,4 +1,5 @@
 '''
+
 Write a script that reads in the words from the words.txt file and finds and prints:
 
 1. The shortest word (if there is a tie, print all)
@@ -9,72 +10,46 @@ Write a script that reads in the words from the words.txt file and finds and pri
 '''
 
 
-# open with 'with'
-# make list of all words with len()
-# make new list with len() min()
-# print the list
+# empty list
+shortest_words = []
+longest_words = []
+word_list = []
+number = 0
+
+# open with 'with'//'as' and read the lines
+with open("words.txt", "r") as file:
+    content = file.read()
+    word_list = content.split()
+    word_list.sort(key=len)
 
 
+# --- Task 1 ---
+# finding the shortest word overall in the file
+# word_list is sorted, that's why the shortest word is at the front
+short = word_list[0]
 
+# iterate trough the rest of the file and append every word that is as short as the shortest
+for word in word_list:
+    if len(word) <= len(short):
+        shortest_words.append(word)
 
+print(shortest_words)
 
+# --- Task 2 ---
+# finding the longest word overall in the file
+# word_list is sorted, that's why the longest word is in the back
+long = word_list[-1]
 
+# iterate trough the rest of the file and append every word that is as long as the shortest
+for word in word_list:
+    if len(word) >= len(long):
+        longest_words.append(word)
 
+print(longest_words)
 
+# --- Task 3 ---
+for word in word_list:
+    number += 1
 
+print(f"The total number of words in 'words.txt' is: {number}")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-# read from file words.txt
-with open("words.txt", "r") as file_out:
-    file_content = file_out.read()
-    words = file_content.split()  # creates a list of words
-    words.sort(key=len)
-    # print(words)
-    # sorted list should have the smallest at the front and the longest in the back
-    short = int(len(words[0]))
-    long = int(len(words[len(words)-1]))
-    # create two new empty lists and append words with the same length
-    shortest_words = []
-    longest_words = []
-    for word in words:
-        if len(word) == short:
-            shortest_words.append(word)
-        if len(word) == long:
-            longest_words.append(word)
-    print()
-    print(f"Here is a list with the shortest words: {shortest_words}")
-    print()
-    print(f"Here is a list with the longest words: {longest_words}")
-
-    # find the total number of words in the file
-    number = 0
-    for word in words:
-        number += 1
-
-    print(f"The total number of words in the file is: {number}")
-
-
-'''

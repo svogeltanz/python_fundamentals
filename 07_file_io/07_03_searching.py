@@ -9,49 +9,32 @@ small folder name with a bigger folder. This program should work for any specifi
 
 '''
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-# /Users/sebastianvogeltanz/Desktop/example
-
 import os
 
-jpg_list = []  # can be used for every file extension
+path = "/Users/sebastianvogeltanz/Desktop/example files"
 
-for file in os.listdir("/Users/sebastianvogeltanz/Desktop/example"):
-    if file.endswith(".jpg"):
-        file = os.path.join("/Users/sebastianvogeltanz/Desktop/example", file)  # builds a new string for the file name with the complete path
-        jpg_list.append(file)  # adds the file name as a string to the list
+jpg_files = []
+mp3_files = []
+pdf_files = []
 
-print(jpg_list)
-'''
+
+for subdir, dirs, files in os.walk("/Users/sebastianvogeltanz/Desktop/example files"):
+    for name in files:
+        if name.endswith(".jpg"):
+            # appends the file name to the path of the folder
+            file = os.path.join("/Users/sebastianvogeltanz/Desktop/example files", name)
+            jpg_files.append(file)
+        elif name.endswith(".mp3"):
+            # appends the file name to the path of the folder
+            file = os.path.join("/Users/sebastianvogeltanz/Desktop/example files", name)
+            mp3_files.append(file)
+        elif name.endswith(".pdf"):
+            # appends the file name to the path of the folder
+            file = os.path.join("/Users/sebastianvogeltanz/Desktop/example files", name)
+            pdf_files.append(file)
+
+
+print(f"These are the JPG files: {jpg_files}")
+print(f"These are the PDF files: {pdf_files}")
+print(f"These are the MP3 files: {mp3_files}")
+
