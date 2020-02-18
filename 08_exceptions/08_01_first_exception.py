@@ -9,8 +9,10 @@ This raises an exception that needs to be handled.
 
 '''
 
+
 try:
-    list = ["hello world!"]
+    list = ["Hi there"]
     print(list[1])
-except IndexError as e:
-    print("There is no element. You are out of range.")
+except IndexError as err:
+    print("Look at the length of the list!", err)
+
