@@ -9,12 +9,23 @@ You do not need to implement the actual functions after writing the tests but yo
 
 '''
 
-# creating a function with input parameters
+
+# creating functions with input parameters
 def add(x, y):
     return x + y
+
 
 def sub(x, y):
     return x - y
 
+
 def multi(x, y):
     return x * y
+
+
+def divide(x, y):
+    try:
+        return x/y
+    except ZeroDivisionError as zde:
+        print("You cannot divide by zero! Please enter a positive number.")
+        return zde
