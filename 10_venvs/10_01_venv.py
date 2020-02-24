@@ -1,4 +1,5 @@
 '''
+
 In your CodingNomads folder create a new folder. Inside of that folder:
 
 1. Create a new virtual environment
@@ -10,12 +11,12 @@ In your CodingNomads folder create a new folder. Inside of that folder:
 6. Delete the virtual environment.
 7. Create a new virtual environment and install the packages from the requirements.txt file.
 
-
 '''
 
 
+
 '''
-Phython Code to enter in the CLI
+Python Code to enter in the CLI
 
 1. python3 -m venv env
 

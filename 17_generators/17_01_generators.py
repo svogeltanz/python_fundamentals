@@ -4,6 +4,29 @@ Then iterate over the generator object and print out each item.
 
 '''
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+
 gen = (x for x in range(5))
 
 print(gen)
@@ -11,3 +34,4 @@ print(gen)
 for num in gen:
     print(num)
 
+'''
