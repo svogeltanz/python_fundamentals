@@ -4,34 +4,9 @@ Then iterate over the generator object and print out each item.
 
 '''
 
+new_generator = (i for i in range(50) if i % 2 == 0)
+print(new_generator)
 
+for i in new_generator:
+    print(i)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-
-gen = (x for x in range(5))
-
-print(gen)
-
-for num in gen:
-    print(num)
-
-'''
