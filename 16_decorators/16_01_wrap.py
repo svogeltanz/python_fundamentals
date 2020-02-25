@@ -1,72 +1,41 @@
 '''
 
-Write a decorator function that wraps text passed to it in a specified html tag.
-The user should be able to decide which tag to use.
+Practice some stuff with decorators
 
 '''
 
+from functools import wraps
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-# Solve the exercise!
-
-def decorator_func(initial_func):
+def decorator_func(org_func):
     def wrapper_func():
-        print("wrapper function picked some...")
-        return initial_func()
+        print('I have got some ')
+        return org_func()
     return wrapper_func  # returns the wrapper func ready to be executed
 
 
-# decorated_pretty = decorator_func(prettify)
-# decorated_pretty()  # executes wrapper function which executes prettify() func
-
-@decorator_func # is the same as the commented above
-def prettify():
-    print("flowers for you")
+@decorator_func
+def flowers():
+    print('flowers for you')
 
 
 @decorator_func
-def feed():
-    print("potato and vegan meat")
+def food():
+    print('hot fries with cheeeeeeese')
 
 
 @decorator_func
-def sports():
-    print("running shoes for you! See you later!")
+def running():
+    print('new running shoes for you! Let\'s go!')
 
 
-prettify()
-feed()
-sports()
+flowers()
+food()
+running()
 
 
+print('--/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/--')
 
-from functools import wraps
 
 def tags(tag_name):
     def tags_decorator(func):
@@ -76,10 +45,12 @@ def tags(tag_name):
         return func_wrapper
     return tags_decorator
 
+
 @tags("p")
 def get_text(name):
     """returns some text"""
     return "Hello "+name
+
 
 print(get_text.__name__) # get_text
 print(get_text.__doc__) # returns some text
@@ -87,5 +58,3 @@ print(get_text.__module__) # __main__
 
 print(get_text("John"))
 # prints "<p>Hello John</p>
-
-'''
