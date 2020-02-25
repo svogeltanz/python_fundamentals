@@ -4,9 +4,14 @@ Then iterate over the generator object and print out each item.
 
 '''
 
-new_generator = (i for i in range(50) if i % 2 == 0)
+# example for .enumerate
+ex_list = ['one', 'two', 'three', 'four']
+
+new_generator = (i for i in ex_list)  # use range(5) for example without enumerate
 print(new_generator)
 
-for i in new_generator:
-    print(i)
+# for i in new_generator:
+    # print(i)
 
+for i, ii in enumerate(new_generator):
+    print(f"{i}: {ii}")

@@ -3,19 +3,12 @@ Write a simple aggregate function, sum(), that takes a list a returns the sum.
 
 '''
 
-def sum(my_list):
 
-    '''Takes in a list and returns the sum'''
-
+def sum_list(numbers):
     result = 0
-
-    for item in my_list:
-        result += item
-
+    for num in numbers:
+        result += num
     return result
 
-my_list = [0, 3, 5, 7, 11, 16]
+print(sum_list([1,2,3,4]))
 
-print(sum(my_list))
-
-# no list as parameter, different name for it
