@@ -23,7 +23,12 @@ famous_quotes = [
 # for loop to print every quote and name
 
 for pack in famous_quotes:
-    names = pack["full_name"]
+    # get the first and last name of every author
+    fn = pack["full_name"].split(' ')[-2]
+    ln = pack["full_name"].split(' ')[-1]
+    # if there is a middle name, append it to the first name
+    if len(pack["full_name"].split(' ')) == 3:
+        fn = f"{pack['full_name'].split(' ')[-3]} {pack['full_name'].split(' ')[-2]}"
     quotes = pack["quote"]
-    print(f'"{quotes}" - {names}')
+    print(f'"{quotes}" - {ln}, {fn}')
 
